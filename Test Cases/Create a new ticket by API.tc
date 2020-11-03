@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Create a new ticket by API</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>1d363a83-a277-43b8-8b8a-a824fd6c3717</testCaseGuid>
+   <variable>
+      <defaultValue>'KT'</defaultValue>
+      <description></description>
+      <id>1b6d04f5-8f9d-415b-95ac-4bcdcdc3f793</id>
+      <masked>false</masked>
+      <name>project</name>
+   </variable>
+   <variable>
+      <defaultValue>'Task'</defaultValue>
+      <description></description>
+      <id>a2a45360-7819-4d23-bebb-3b01e315548e</id>
+      <masked>false</masked>
+      <name>issueType</name>
+   </variable>
+   <variable>
+      <defaultValue>'Task created by using calling API'</defaultValue>
+      <description></description>
+      <id>6504583c-06fc-47bf-be01-03d3c47fe94c</id>
+      <masked>false</masked>
+      <name>summary</name>
+   </variable>
+   <variable>
+      <defaultValue>201</defaultValue>
+      <description></description>
+      <id>8d3de896-8ba4-4c1e-9812-c123d373c258</id>
+      <masked>false</masked>
+      <name>expectedStatus</name>
+   </variable>
+</TestCaseEntity>

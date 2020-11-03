@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Create and update a ticket by both API and UI</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>756bdf1d-7199-4b62-a90e-63273c2c9877</testCaseGuid>
+   <variable>
+      <defaultValue>'KT'</defaultValue>
+      <description></description>
+      <id>64bd85d7-7795-4cb6-a05b-3bf26fb66127</id>
+      <masked>false</masked>
+      <name>project</name>
+   </variable>
+   <variable>
+      <defaultValue>'Task'</defaultValue>
+      <description></description>
+      <id>a6dc30f6-4ea0-45b5-89de-e05adf9add85</id>
+      <masked>false</masked>
+      <name>issueType</name>
+   </variable>
+   <variable>
+      <defaultValue>'A new ticket submitted by Katalon QA team'</defaultValue>
+      <description></description>
+      <id>6f0a04e2-9584-4019-aa84-5dc9f837e1d3</id>
+      <masked>false</masked>
+      <name>summary</name>
+   </variable>
+   <variable>
+      <defaultValue>'Summary is updated'</defaultValue>
+      <description></description>
+      <id>33b33e69-742d-471f-9454-ccdf4dfdb5d9</id>
+      <masked>false</masked>
+      <name>newSummary</name>
+   </variable>
+</TestCaseEntity>
