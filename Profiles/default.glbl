@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'http://3.86.20.208:8080'</initValue>
+      <initValue>'http://jira-demo.katalon.com:8080'</initValue>
       <name>serverURL</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
