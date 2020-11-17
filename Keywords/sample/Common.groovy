@@ -77,7 +77,7 @@ public class Common {
 		return jsonResponse.key
 	}
 
-	
+
 	/**
 	 * Update Summary field of a ticket
 	 * @param ticketKey: ticket id, e.x: 'KT-21'
@@ -89,6 +89,7 @@ public class Common {
 		WebUI.setText(findTestObject('WebUI/Ticket Details/txtSearch'), ticketKey)
 		WebUI.click(findTestObject('WebUI/Ticket Details/lblTicketKeySearchResult', ['ticketKey': ticketKey]))
 		WebUI.click(findTestObject('WebUI/Ticket Details/lblSummary'))
+		WebUI.click(findTestObject('WebUI/Ticket Details/txtSummary'))
 		WebUI.setText(findTestObject('WebUI/Ticket Details/txtSummary'), newSummaryValue)
 		WebUI.click(findTestObject('WebUI/Ticket Details/icoSave'))
 		WebUI.waitForElementNotPresent(findTestObject('WebUI/Ticket Details/txtSummary'), GlobalVariable.presentTimeout)
