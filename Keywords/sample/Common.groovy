@@ -88,12 +88,11 @@ public class Common {
 	def updateExistingTicket(String ticketKey, String newSummaryValue) {
 		WebUI.setText(findTestObject('WebUI/Ticket Details/txtSearch'), ticketKey)
 		WebUI.click(findTestObject('WebUI/Ticket Details/lblTicketKeySearchResult', ['ticketKey': ticketKey]))
-		WebUI.click(findTestObject('WebUI/Ticket Details/lblSummary'))
-		WebUI.click(findTestObject('WebUI/Ticket Details/txtSummary'))
+		WebUI.click(findTestObject('WebUI/Ticket Details/icoEdit'))
 		WebUI.setText(findTestObject('WebUI/Ticket Details/txtSummary'), newSummaryValue)
 		WebUI.click(findTestObject('WebUI/Ticket Details/icoSave'))
-		WebUI.waitForElementNotPresent(findTestObject('WebUI/Ticket Details/txtSummary'), GlobalVariable.presentTimeout)
-		String newVal = WebUI.getText(findTestObject('WebUI/Ticket Details/lblSummary'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/WebUI/Ticket Details/dynamicSummary',['summary': newSummaryValue]), GlobalVariable.presentTimeout)
+		String newVal = WebUI.getText(findTestObject('Object Repository/WebUI/Ticket Details/lblSummary'))
 		WebUI.verifyEqual(newVal, newSummaryValue)
 		WebUI.closeBrowser()
 	}

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>lblSummary</name>
+   <name>dynamicSummary</name>
    <tag></tag>
-   <elementGuidId>20c082b8-24ab-43d1-9ff8-ea6a0066f9c2</elementGuidId>
+   <elementGuidId>66528326-8544-4cc7-8448-14a55969a84c</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//h1[@id='summary-val']</value>
+         <value>//h1[@id='summary-val' and  text()='${summary}']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
