@@ -6,14 +6,29 @@
 trigger:
 - master
 
+resources:
+   repositories:
+   - repository: StoreTest
+     type: github
+     ref: refs/heads/master
+     name: katalon-qa-automation-store
+     endpoint: github.com/katalon-studio
+
 pool:
-  vmImage: ubuntu-latest
+  vmImage: windows-latest
+
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+ - task: S3Download@1
+   inputs:
+     awsCredentials: 'aws'
+     regionName: 'us-east-1'
+     bucketName: 'katalon'
+     sourceFolder: '$(VERSION)'
+     globExpressions: '@(Katalon_Studio_Windows_64|Katalon_Studio_Engine_Windows_64)*.zip'
+     targetFolder: '$(TMP_DIR)'
+ displayName: 'Download KSE and KRE'
 
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+    Katalon_Studio_Engine_Windows_64-8.0.0\katalonc -noSplash -runMode=console -projectPath="%WORK_DIR%\Sample Jira ticket creation.prj" -retry=0 -testSuitePath="Test Suites/Create and update a task by both API and UI" -browserType="Chrome" -apiKey="f94fd9eb-459b-4115-8980-e632fb614490" 
+  displayName: 'Run ADO test - first try by Loan'
