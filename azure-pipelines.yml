@@ -1,22 +1,50 @@
-name: Run automation
-on:  
-  push:
-    branches:
-      - master
-# resources
-jobs:
-  run_automation:
-    runs-on: windows-latest
-    steps:
-      - name: download ks
-      - run: |
-          curl "https://download.katalon.com/8.0.0/Katalon_Studio_Engine_Windows_64-8.0.0.zip" -o "katalon_runtime_engine.zip"
-      - name: unzip
-      - run: |
-          unzip katalon_runtime_engine.zip
-      - name: clone project
-      - run: |
-          git clone https://github.com/kms-loantran/Regression-api-web-combination-sample.git
-      - name: run ks
-      - run: |
-        Katalon_Studio_Engine_Windows_64-8.0.0\katalonc -noSplash -runMode=console -projectPath="Regression-api-web-combination-sample\Sample Jira ticket creation.prj" -retry=0 -testSuitePath="Test Suites/Create and update a task by both API and UI" -browserType="Chrome" -apiKey="f94fd9eb-459b-4115-8980-e632fb614490"
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+resources:
+   repositories:
+   - repository: StoreTest
+     type: github
+     ref: refs/heads/master
+     name: Regression-api-web-combination-sample
+     endpoint: github.com/kms-loantran
+
+pool:
+  vmImage: windows-latest
+
+variables:
+  VERSION: "8.0.0"
+
+# steps:
+#  - task: S3Download@1
+#    inputs:
+#      awsCredentials: 'aws'
+#      regionName: 'us-east-1'
+#      bucketName: 'katalon'
+#      sourceFolder: '$(VERSION)'
+#      globExpressions: '@(Katalon_Studio_Windows_64|Katalon_Studio_Engine_Windows_64)*.zip'
+#  displayName: 'Download KSE and KRE'
+steps:
+ - uses: windows-lasted 
+
+- checkout: self
+    fetchDepth: 1
+    clean: true
+
+- bash: 
+    curl "https://download.katalon.com/8.0.0/Katalon_Studio_Engine_Windows_64-8.0.0.zip" -o "katalon_runtime_engine.zip" 
+
+- bash:
+    unzip katalon_runtime_engine.zip
+
+# - bash:
+#     ls -al
+
+- script:
+    Katalon_Studio_Engine_Windows_64-8.0.0\katalonc -noSplash -runMode=console -projectPath="Regression-api-web-combination-sample\Sample Jira ticket creation.prj" -retry=0 -testSuitePath="Test Suites/Create and update a task by both API and UI" -browserType="Chrome" -apiKey="f94fd9eb-459b-4115-8980-e632fb614490" 
+  displayName: 'Run ADO test - first try by Loan'
