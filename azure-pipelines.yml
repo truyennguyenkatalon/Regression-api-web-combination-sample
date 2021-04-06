@@ -1,4 +1,5 @@
 name: Run automation
+on:  
   push:
     branches:
       - master
