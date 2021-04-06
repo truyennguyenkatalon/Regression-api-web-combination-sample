@@ -13,7 +13,7 @@ resources:
   repositories:
   - repository: Regression-api-web-combination-sample
     type: github
-    name: kms-loantran/Regression-api-web-combination-sample
+    name: Regression-api-web-combination-sample
     endpoint: github.com/kms-loantran
 
 trigger:
