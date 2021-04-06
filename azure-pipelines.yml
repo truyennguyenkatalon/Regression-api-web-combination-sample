@@ -36,10 +36,10 @@ stages:
       clean: true
       fetchDepth: 1
     - bash: |
-        curl "https://download.katalon.com/${VERSION}/Katalon_Studio_Engine_Windows_64-${VERSION}.zip" 
+        curl "https://download.katalon.com/${VERSION}/Katalon_Studio_Engine_Windows_64-${VERSION}.zip" -o "katalon_runtime_engine.zip"
       displayName: download KRE package
     - bash: 
-        unzip Katalon_Studio_Windows_64-${VERSION}.zip
+        unzip katalon_runtime_engine.zip
       displayName: unzip KRE package
     - script: Katalon_Studio_Engine_Windows_64-8.0.0\katalonc -noSplash -runMode=console -projectPath="Regression-api-web-combination-sample\Sample Jira ticket creation.prj" -retry=0 -testSuitePath="Test Suites/Create and update a task by both API and UI" -browserType="Chrome" -apiKey="f94fd9eb-459b-4115-8980-e632fb614490"
 
