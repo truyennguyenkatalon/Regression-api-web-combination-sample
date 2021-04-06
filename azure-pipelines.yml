@@ -6,16 +6,15 @@
 
 name: loan test pipeline
 
-# variables:  # job-level
-#       VERSION: '8.0.0'
-
-# resources:
+## this configuration is ignored since the pipeline is already connected to github
+## and there is already a step checkout to clone script from github under 'steps'
+# resources: 
 #   repositories:
 #   - repository: Regression-api-web-combination-sample
 #     type: github
 #     ref: refs/heads/master
 #     name: kms-loantran/Regression-api-web-combination-sample
-#     endpoint: 'github.com_kms-loantran'
+#     endpoint: github/kms-loantran
 
 trigger:
   - master
@@ -35,9 +34,9 @@ stages:
     steps:
     - checkout: self
       clean: true
-      fetchDepth: 5
+      fetchDepth: 1
     - bash: |
-        curl "https://download.katalon.com/${VERSION}/Katalon_Studio_Engine_Windows_64-8.0.0.zip" -o "katalon_runtime_engine.zip" 
+        curl "https://download.katalon.com/${VERSION}/Katalon_Studio_Engine_Windows_64-${VERSION}.zip" -o "katalon_runtime_engine.zip" 
       displayName: download KRE package
     - bash: 
         unzip Katalon_Studio_Windows_64-${VERSION}.zip
