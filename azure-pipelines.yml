@@ -33,7 +33,7 @@ stages:
     variables:  # job-level
       VERSION: '8.0.0'
     steps:
-    - checkout: 
+    - checkout: self
       clean: true
       fetchDepth: 5
     - bash: |
