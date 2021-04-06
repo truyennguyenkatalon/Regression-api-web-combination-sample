@@ -9,13 +9,13 @@ name: loan test pipeline
 # variables:  # job-level
 #       VERSION: '8.0.0'
 
-resources:
-  repositories:
-  - repository: Regression-api-web-combination-sample
-    type: github
-    ref: refs/heads/master
-    name: kms-loantran/Regression-api-web-combination-sample
-    endpoint: 'github.com_kms-loantran'
+# resources:
+#   repositories:
+#   - repository: Regression-api-web-combination-sample
+#     type: github
+#     ref: refs/heads/master
+#     name: kms-loantran/Regression-api-web-combination-sample
+#     endpoint: 'github.com_kms-loantran'
 
 trigger:
   - master
