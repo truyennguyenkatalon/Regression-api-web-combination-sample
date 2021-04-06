@@ -15,7 +15,7 @@ resources:
     type: github
     ref: refs/heads/master
     name: kms-loantran/Regression-api-web-combination-sample
-    endpoint: github.com/kms-loantran
+    endpoint: https://github.com/kms-loantran
 
 trigger:
   - master
