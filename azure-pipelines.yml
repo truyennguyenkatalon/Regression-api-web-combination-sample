@@ -35,13 +35,9 @@ stages:
     - checkout: self
       clean: true
       fetchDepth: 1
-    - task: Bash@3
-      inputs:
-        targetType: 'inline'
-        script: curl https://download.katalon.com/${VERSION}/Katalon_Studio_Engine_Windows_64-${VERSION}.zip -o katalon_runtime_engine.zip
-    # - bash: |
-    #     curl "https://download.katalon.com/${VERSION}/Katalon_Studio_Engine_Windows_64-${VERSION}.zip" -o "katalon_runtime_engine.zip"
-    #   displayName: download KRE package
+    - bash: |
+        curl "https://download.katalon.com/${VERSION}/Katalon_Studio_Engine_Windows_64-${VERSION}.zip" -o "katalon_runtime_engine.zip"
+      displayName: download KRE package
     - bash: 
         unzip katalon_runtime_engine.zip
       displayName: unzip KRE package
