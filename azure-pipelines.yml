@@ -30,7 +30,6 @@ variables:
 #      globExpressions: '@(Katalon_Studio_Windows_64|Katalon_Studio_Engine_Windows_64)*.zip'
 #  displayName: 'Download KSE and KRE'
 steps:
- - uses: windows-lasted 
 
 - checkout: self
     fetchDepth: 1
