@@ -48,7 +48,7 @@ stages:
     - script: |
         set -ex
         projectPath="${WORK_DIR}/Regression-api-web-combination-sample/Sample Jira ticket creation.prj"
-        katalonc="katalon_runtime_engine/Katalon Studio Engine.app/Contents/MacOS/katalonc"
+        katalonc="Katalon_Studio_Engine_MacOS-8.0.0/Katalon Studio Engine.app/Contents/MacOS/katalonc"
         ls -al
         echo $projectPath
         echo $katalonc
