@@ -43,9 +43,7 @@ stages:
       displayName: download KRE package
     - bash: |
         set -ex
-        ls -al
-        chmod 777 katalon_runtime_engine.tar.gz
-        unzip katalon_runtime_engine.tar.gz
+        tsr -xvf katalon_runtime_engine.tar.gz
       displayName: unzip KRE package
     - script: |
         set -ex
