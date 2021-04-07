@@ -38,8 +38,13 @@ stages:
     - bash: |
         set -ex
         curl "https://download.katalon.com/8.0.0/Katalon_Studio_Engine_MacOS-8.0.0.tar.gz" -o "katalon_runtime_engine.tar.gz"
+        pwd
+        ls -al
       displayName: download KRE package
     - bash: 
+        set -ex
+        pwd
+        ls -al
         unzip katalon_runtime_engine.tar.gz
       displayName: unzip KRE package
     - script: Katalon_Studio_Engine_Windows_64-8.0.0\katalonc -noSplash -runMode=console -projectPath="Regression-api-web-combination-sample\Sample Jira ticket creation.prj" -retry=0 -testSuitePath="Test Suites/Create and update a task by both API and UI" -browserType="Chrome" -apiKey="f94fd9eb-459b-4115-8980-e632fb614490"
