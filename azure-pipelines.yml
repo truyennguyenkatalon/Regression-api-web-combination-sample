@@ -41,7 +41,7 @@ stages:
         curl "https://download.katalon.com/8.0.0/Katalon_Studio_Engine_MacOS-8.0.0.tar.gz" -o "katalon_runtime_engine.tar.gz"
       displayName: download KRE package
     - bash: 
-        unzip katalon_runtime_engine.zip
+        unzip katalon_runtime_engine.tar.gz
       displayName: unzip KRE package
     # - task: S3Download@1
     #   inputs:
