@@ -39,13 +39,10 @@ stages:
       fetchDepth: 5
     - bash: |
         set -ex
-        curl "https://download.katalon.com/8.0.0/Katalon_Studio_Engine_MacOS-8.0.0.tar.gz" -o "katalon_runtime_engine.tar.gz"
-        pwd
-        ls -al
+        curl "https://download.katalon.com/8.0.0/Katalon_Studio_Engine_MacOS-8.0.0.tar.gz" -o katalon_runtime_engine.tar.gz
       displayName: download KRE package
     - bash: |
         set -ex
-        pwd
         ls -al
         unzip katalon_runtime_engine.tar.gz
       displayName: unzip KRE package
