@@ -54,4 +54,4 @@ stages:
         katalonc="${TMP_DIR}/katalon_runtime_engine/Katalon Studio Engine.app/Contents/MacOS/katalonc"
         pwd
         ls -al
-        "$katalonc" -noSplash -runMode=console -projectPath="Regression-api-web-combination-sample/Sample Jira ticket creation.prj" -retry=0 -testSuitePath="Test Suites/Create and update a task by both API and UI" -browserType="Chrome" -apiKey="f94fd9eb-459b-4115-8980-e632fb614490"
+        "$katalonc" -noSplash -runMode=console -projectPath="$projectPath" -retry=0 -testSuitePath="Test Suites/Create and update a task by both API and UI" -browserType="Chrome" -apiKey="f94fd9eb-459b-4115-8980-e632fb614490"
