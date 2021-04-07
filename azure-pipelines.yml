@@ -31,6 +31,7 @@ stages:
     continueOnError: true
     variables:  # job-level
       VERSION: '8.0.0'
+      WORK_DIR: $(Build.Repository.LocalPath)
     steps:
     - checkout: self
       clean: true
