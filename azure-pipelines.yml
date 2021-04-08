@@ -54,6 +54,6 @@ stages:
         echo $katalonc
         ls -al "$(pwd)/Katalon_Studio_Engine_MacOS-8.0.0/Katalon Studio Engine.app/Contents/MacOS"
         ls -al "${WORK_DIR}"
-        ls -al "$(pwd)/Sample Jira ticket creation.prj"
+        ls -al "$(pwd)/Sample-Jira-ticket-creation.prj"
         cd "$(pwd)/Katalon_Studio_Engine_MacOS-8.0.0/Katalon Studio Engine.app/Contents/MacOS"
-        ./katalonc -noSplash -runMode=console -projectPath="${WORK_DIR}/Sample Jira ticket creation.prj" -retry=0 -testSuitePath="Test Suites/Create and update a task by both API and UI" -browserType="Chrome" -apiKey="f94fd9eb-459b-4115-8980-e632fb614490"
+        ./katalonc -noSplash -runMode=console "-projectPath=${WORK_DIR}/Sample-Jira-ticket-creation.prj" -retry=0 -testSuitePath="Test Suites/Create and update a task by both API and UI" -browserType="Chrome" -apiKey="f94fd9eb-459b-4115-8980-e632fb614490"
