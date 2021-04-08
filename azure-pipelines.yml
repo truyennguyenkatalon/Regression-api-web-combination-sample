@@ -58,5 +58,5 @@ stages:
         cd "$(pwd)/Katalon_Studio_Engine_MacOS-8.0.0/Katalon Studio Engine.app/Contents/MacOS"
         ls -al
         chmod +x katalonc
-        "$katalonc" -apiKey="f94fd9eb-459b-4115-8980-e632fb614490" -noSplash -runMode=console -projectPath="${WORK_DIR}/Sample-Jira-ticket-creation.prj" -retry=0 -testSuitePath="Test Suites/Regression" -browserType="Chrome" 
+        "$katalonc" -apiKey="f94fd9eb-459b-4115-8980-e632fb614490" -noSplash -runMode=console -projectPath="${WORK_DIR}/Regression-api-web-combination-sample/Sample-Jira-ticket-creation.prj" -retry=0 -testSuitePath="Test Suites/Regression" -browserType="Chrome" 
    
