@@ -55,7 +55,7 @@ stages:
         echo $katalonc
         echo $testSuite
         ls -al "$(pwd)/Sample-Jira-ticket-creation.prj"
-        ls -al "$(pwd)/Test Suites"
+        ls -al $testSuite
         chmod +x katalonc
         "$katalonc" -apiKey="f94fd9eb-459b-4115-8980-e632fb614490" -projectPath="$projectPath" -testSuitePath="Test Suites/Regression" -executionProfile="default" -browserType="Chrome" -noSplash -runMode=console -retry=0 
    
