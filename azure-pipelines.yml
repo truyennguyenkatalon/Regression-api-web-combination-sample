@@ -49,7 +49,7 @@ stages:
         set -ex
         katalonc="$(pwd)/Katalon_Studio_Engine_MacOS-8.0.0/Katalon Studio Engine.app/Contents/MacOS/katalonc"
         projectPath="${WORK_DIR}/Sample-Jira-ticket-creation.prj"
-        testSuite="${WORK_DIR}/Test Suites/Regression"
+        testSuite="${WORK_DIR}/Test Suites"
         ls -al
         echo $projectPath
         echo $katalonc
