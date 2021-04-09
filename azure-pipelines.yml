@@ -53,9 +53,10 @@ stages:
         ls -al
         echo $projectPath
         echo $katalonc
+        echo $testSuite
         ls -al "$(pwd)/Sample-Jira-ticket-creation.prj"
         cd "$(pwd)/Katalon_Studio_Engine_MacOS-8.0.0/Katalon Studio Engine.app/Contents/MacOS"
-        ls "${WORK_DIR}/Test Suites"
+        ls "$(pwd)/Test Suites"
         chmod +x katalonc
         "$katalonc" -apiKey="f94fd9eb-459b-4115-8980-e632fb614490" -projectPath="$projectPath" -testSuitePath="Test Suites/Regression" -executionProfile="default" -browserType="Chrome" -noSplash -runMode=console -retry=0 
    
