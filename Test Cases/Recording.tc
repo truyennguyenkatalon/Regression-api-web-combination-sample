@@ -3,6 +3,16 @@
    <description></description>
    <name>Recording</name>
    <tag></tag>
+   <integratedEntity>
+      <productName>Azure</productName>
+      <properties>
+         <entry>
+            <key>azure.testcase.ids</key>
+            <value>119</value>
+         </entry>
+      </properties>
+      <type>TESTCASE</type>
+   </integratedEntity>
    <comment></comment>
    <testCaseGuid>b6e171ca-0aee-468e-b50b-d4a7a9ddcda8</testCaseGuid>
 </TestCaseEntity>

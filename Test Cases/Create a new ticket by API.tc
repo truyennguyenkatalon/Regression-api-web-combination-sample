@@ -3,6 +3,16 @@
    <description></description>
    <name>Create a new ticket by API</name>
    <tag></tag>
+   <integratedEntity>
+      <productName>Azure</productName>
+      <properties>
+         <entry>
+            <key>azure.testcase.ids</key>
+            <value>126</value>
+         </entry>
+      </properties>
+      <type>TESTCASE</type>
+   </integratedEntity>
    <comment></comment>
    <testCaseGuid>1d363a83-a277-43b8-8b8a-a824fd6c3717</testCaseGuid>
    <variable>
