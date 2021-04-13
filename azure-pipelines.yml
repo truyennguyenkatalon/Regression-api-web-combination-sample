@@ -57,5 +57,5 @@ stages:
         ls -al "$(pwd)/Sample-Jira-ticket-creation.prj"
         cd '/Users/runner/work/1/s/Test Suites'
         ls -al
-        "$katalonc" -apiKey="f94fd9eb-459b-4115-8980-e632fb614490" -projectPath="$projectPath" -testSuiteCollectionPath="Test Suites/Regression"
+        "$katalonc" -apiKey="f94fd9eb-459b-4115-8980-e632fb614490" -projectPath="$projectPath" -testSuiteCollectionPath="Test Suites/Regression" -adoPlanId=93 -adoTestRunName=LoanRunInPipeline
    
