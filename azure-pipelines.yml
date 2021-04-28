@@ -57,5 +57,5 @@ stages:
         ls -al "$(pwd)/Sample-Jira-ticket-creation.prj"
         cd '/Users/runner/work/1/s/Test Suites'
         ls -al
-        "$katalonc" -apiKey="f94fd9eb-459b-4115-8980-e632fb614490" -projectPath="$projectPath" -testSuitePath="Test Suites/multiple test points - Create and update a task by both API and UI" -browserType="Firefox" -adoPlanId=93 -adoTestRunName="Katalon Test ADO" --info -adoDefinitionID=10
+        "$katalonc" -apiKey="f94fd9eb-459b-4115-8980-e632fb614490" -projectPath="$projectPath" -testSuitePath="Test Suites/multiple test points - Create and update a task by both API and UI" -browserType="Firefox" -adoPlanId=93 -adoTestRunName="Katalon Test ADO via pipeline" --info -adoDefinitionID=10
    
