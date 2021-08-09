@@ -40,7 +40,7 @@ stages:
       WORK_DIR: $(Build.Repository.LocalPath)
       TMP_DIR: $(Build.ArtifactStagingDirectory)
     steps:
-    - checkout: Regression-api-web-combination-sample
+    - checkout: self
       clean: true
       fetchDepth: 1
     - checkout: SampleWebKeywordsTest
