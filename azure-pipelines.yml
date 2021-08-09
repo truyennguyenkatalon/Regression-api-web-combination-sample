@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 
-name: loan test pipeline
+name: KS Regression Automation
 
 ## this configuration is ignored since the pipeline is already connected to github
 ## and there is already a step checkout to clone script from github under 'steps'
@@ -30,7 +30,7 @@ stages:
     displayName: Run automation script on Mac
     continueOnError: true
     variables:  # job-level
-      VERSION: '8.0.0'
+      VERSION: '8.1.0'
       WORK_DIR: $(Build.Repository.LocalPath)
       TMP_DIR: $(Build.ArtifactStagingDirectory)
     steps:
@@ -39,7 +39,7 @@ stages:
       fetchDepth: 5
     - bash: |
         set -ex
-        curl "https://download.katalon.com/8.0.0/Katalon_Studio_Engine_MacOS-8.0.0.tar.gz" -o katalon_runtime_engine.tar.gz
+        curl "https://download.katalon.com/${VERSION}/Katalon_Studio_Engine_MacOS-${VERSION}.tar.gz" -o katalon_runtime_engine.tar.gz
       displayName: download KRE package
     - bash: |
         set -ex
