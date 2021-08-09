@@ -19,7 +19,7 @@ resources:
     type: github
     ref: refs/heads/master
     name: katalon-studio-samples/web-samples
-    # endpoint: github.com/katalon-studio
+    endpoint: github.com/katalon-studio
 
 trigger:
   - master
