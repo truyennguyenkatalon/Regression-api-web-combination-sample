@@ -43,9 +43,9 @@ stages:
     - checkout: self
       clean: true
       fetchDepth: 1
-    # - checkout: SampleWebKeywordsTest
-    #   fetchDepth: 1
-    #   clean: true
+    - checkout: SampleWebKeywordsTest
+      fetchDepth: 1
+      clean: true
     - bash: |
         set -ex
         curl "https://download.katalon.com/${VERSION}/Katalon_Studio_Engine_MacOS-${VERSION}.tar.gz" -o katalon_runtime_engine.tar.gz
