@@ -47,7 +47,7 @@ stages:
       displayName: unzip KRE package
     - script: |
         set -ex
-        katalonc="$(pwd)/Katalon_Studio_Engine_MacOS-8.0.0/Katalon Studio Engine.app/Contents/MacOS/katalonc"
+        katalonc="$(pwd)/Katalon_Studio_Engine_MacOS-${VERSION}/Katalon Studio Engine.app/Contents/MacOS/katalonc"
         projectPath="${WORK_DIR}/Sample-Jira-ticket-creation.prj"
         testSuite="${WORK_DIR}/Test Suites"
         ls -al
