@@ -8,13 +8,13 @@ name: KS Regression Automation
 
 ## this configuration is ignored since the pipeline is already connected to github
 ## and there is already a step checkout to clone script from github under 'steps'
-resources: 
-  repositories:
-  - repository: Regression-api-web-combination-sample
-    type: github
-    ref: refs/heads/master
-    name: kms-loantran/Regression-api-web-combination-sample
-    endpoint: github/kms-loantran
+# resources: 
+#   repositories:
+#   - repository: Regression-api-web-combination-sample
+#     type: github
+#     ref: refs/heads/master
+#     name: kms-loantran/Regression-api-web-combination-sample
+#     endpoint: github/kms-loantran
   # - repository: SampleWebKeywordsTest
   #   type: github
   #   ref: refs/heads/master
