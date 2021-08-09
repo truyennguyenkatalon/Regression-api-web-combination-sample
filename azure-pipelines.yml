@@ -8,13 +8,18 @@ name: KS Regression Automation
 
 ## this configuration is ignored since the pipeline is already connected to github
 ## and there is already a step checkout to clone script from github under 'steps'
-# resources: 
-#   repositories:
-#   - repository: Regression-api-web-combination-sample
-#     type: github
-#     ref: refs/heads/master
-#     name: kms-loantran/Regression-api-web-combination-sample
-#     endpoint: github/kms-loantran
+resources: 
+  repositories:
+  - repository: Regression-api-web-combination-sample
+    type: github
+    ref: refs/heads/master
+    name: kms-loantran/Regression-api-web-combination-sample
+    endpoint: github/kms-loantran
+  - repository: SampleWebKeywordsTest
+    type: github
+    ref: refs/heads/master
+    name: katalon-studio-samples/web-samples
+    endpoint: github.com/katalon-studio
 
 trigger:
   - master
@@ -35,9 +40,12 @@ stages:
       WORK_DIR: $(Build.Repository.LocalPath)
       TMP_DIR: $(Build.ArtifactStagingDirectory)
     steps:
-    - checkout: self
+    - checkout: Regression-api-web-combination-sample
       clean: true
-      fetchDepth: 5
+      fetchDepth: 1
+    - checkout: SampleWebKeywordsTest
+      fetchDepth: 1
+      clean: true
     - bash: |
         set -ex
         curl "https://download.katalon.com/${VERSION}/Katalon_Studio_Engine_MacOS-${VERSION}.tar.gz" -o katalon_runtime_engine.tar.gz
@@ -59,4 +67,20 @@ stages:
         cd '/Users/runner/work/1/s/Test Suites'
         ls -al
         "$katalonc" -apiKey="f94fd9eb-459b-4115-8980-e632fb614490" -projectPath="$projectPath" -testSuitePath="Test Suites/multiple test points - Create and update a task by both API and UI" -browserType="Firefox" -adoPlanId=93 -adoTestRunName="Katalon Test ADO via pipeline" --info -adoDefinitionID=10 --config -webui.autoUpdateDrivers=${AUTO_UPDATE_WEBDRIVERS}
+      displayName: Run sample Jira Test
+      condition: 
+    - script: |
+        set -ex
+        katalonc="$(pwd)/Katalon_Studio_Engine_MacOS-${VERSION}/Katalon Studio Engine.app/Contents/MacOS/katalonc"
+        projectPath="${WORK_DIR}/web-samples.prj"
+        testSuite="${WORK_DIR}/Test Suites"
+        ls -al
+        echo $projectPath
+        echo $katalonc
+        echo $testSuite
+        ls -al "$(pwd)/web-samples.prj"
+        cd '/Users/runner/work/1/s/Test Suites'
+        ls -al
+        "$katalonc" -apiKey="f94fd9eb-459b-4115-8980-e632fb614490" -projectPath="$projectPath" -testSuitePath="Test Suites/WebUI Builtin Keywords Test" -browserType="Chrome" Test ADO via pipeline" --config -webui.autoUpdateDrivers=${AUTO_UPDATE_WEBDRIVERS}
+      displayName: Run Sample WebUI Keywords Test
    
