@@ -19,7 +19,7 @@ resources:
     type: github
     # ref: refs/heads/master
     name: katalon-studio-samples/web-samples
-    endpoint: QA Regression Automation
+    endpoint: github.com_kms-loantran
 
 trigger:
   - master
