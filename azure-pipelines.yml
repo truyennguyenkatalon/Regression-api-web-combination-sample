@@ -81,6 +81,6 @@ stages:
         ls -al "$(pwd)/web-samples/web-samples.prj"
         cd '/Users/runner/work/1/s/web-samples/Test Suites'
         ls -al
-        "$katalonc" -apiKey="f94fd9eb-459b-4115-8980-e632fb614490" -projectPath="$projectPath" -testSuitePath="Test Suites/WebUI Builtin Keywords Test" -browserType="Chrome" Test ADO via pipeline" --config -webui.autoUpdateDrivers=${AUTO_UPDATE_WEBDRIVERS}
+        "$katalonc" -apiKey="f94fd9eb-459b-4115-8980-e632fb614490" -projectPath="$projectPath" -testSuitePath="Test Suites/WebUI Builtin Keywords Test" -browserType="Chrome" --config -webui.autoUpdateDrivers=${AUTO_UPDATE_WEBDRIVERS}
       displayName: Run Sample WebUI Keywords Test
    
