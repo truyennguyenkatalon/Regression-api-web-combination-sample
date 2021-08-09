@@ -17,7 +17,7 @@ resources:
 #     endpoint: github/kms-loantran
   - repository: SampleWebKeywordsTest
     type: github
-    # ref: refs/heads/master
+    ref: refs/heads/master
     name: katalon-studio-samples/web-samples
     endpoint: github.com_kms-loantran
 
