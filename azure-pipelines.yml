@@ -27,8 +27,7 @@ trigger:
 pool:
   name: vicky
   demands:
-   - agent.name -equals VikyTest
-   - agent.os -equals VikyTest
+   - VikyTest
 
 stages:
 - stage: Test
