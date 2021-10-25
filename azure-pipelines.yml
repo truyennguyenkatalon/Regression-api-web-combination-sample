@@ -25,9 +25,10 @@ trigger:
   - master
 
 pool:
-  name: Default
+  name: vicky
   demands:
-   - agent.name -equals "VikyTest"
+   - agent.name -equals VikyTest
+   - agent.os -equals VikyTest
 
 stages:
 - stage: Test
