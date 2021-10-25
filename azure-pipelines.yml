@@ -25,7 +25,9 @@ trigger:
   - master
 
 pool:
-  vmImage: macOS-latest
+  name: vicky
+  demands:
+   - agent.name -equals VikyTest
 
 stages:
 - stage: Test
