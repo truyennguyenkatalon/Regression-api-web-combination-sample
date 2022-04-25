@@ -8,4 +8,4 @@ phases:
       - docker pull katalonstudio/katalon:test
   build:
     commands:
-      - docker run -t --rm -v "$(pwd)":/tmp/project katalonstudio/katalon katalonc.sh -projectPath=/tmp/project -apiKey=$KATALON_API_KEY -browserType="Chrome" -retry=0 -retryStrategy=immediately -testSuitePath="Test Suites/multiple test points - Create and update a task by both API and UI" --config -webui.autoUpdateDrivers=true
+      - docker run -t --rm -v "$(pwd)":/tmp/project katalonstudio/katalon katalonc.sh -projectPath=/tmp/project -apiKey=$KATALON_API_KEY -browserType="Chrome" -retry=0 -retryStrategy=immediately -testSuitePath="Test Suites/google test" --config -webui.autoUpdateDrivers=true
