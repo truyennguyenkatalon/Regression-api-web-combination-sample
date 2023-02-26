@@ -9,3 +9,10 @@ phases:
   build:
     commands:
       - docker run -t --rm -v "$(pwd)":/tmp/project katalonstudio/katalon katalonc.sh -projectPath=/tmp/project -apiKey=$KATALON_API_KEY -browserType="Chrome" -retry=0 -retryStrategy=immediately -testSuitePath="Test Suites/google test" --config -webui.autoUpdateDrivers=true
+artifacts:
+  files:
+    - report/*
+reports: #New
+  KatalonTestReports: # CodeBuild will create a report group called "KatalonTestReports".
+    files: #Store all of the files
+      - 'report/JUnit_Report.xml'
