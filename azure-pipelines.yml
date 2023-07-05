@@ -21,8 +21,8 @@ trigger:
 
 pool:
   name: vicky
-  demands:
-   - agent.Name -equals VickyTest
+  # demands:
+  #  - agent.Name -equals VickyTest
 
 stages:
 - stage: Test
