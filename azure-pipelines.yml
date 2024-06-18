@@ -6,8 +6,10 @@ trigger:
 pool:
   name: Default
   demands:
-   - agent.name -equals Truyens-MacBook-Air-2
+    - agent.name -equals Truyens-MacBook-Air-2
 
-steps:
-- script: echo "Hello, World!"
-  displayName: 'Run a one-line script'
+jobs:
+- job: Test
+  steps:
+  - script: echo "Hello, World!"
+    displayName: 'Run a one-line script'
