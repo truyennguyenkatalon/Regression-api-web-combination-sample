@@ -16,8 +16,11 @@ jobs:
     displayName: 'Run a one-line script'
   - bash: |
       echo "Downloading KRE package..."
-      curl "https://download.katalon.com/${VERSION}/Katalon_Studio_Engine_MacOS-${VERSION}.tar.gz" -o katalon_runtime_engine.tar.gz
-    displayName: 'Download KRE package'
+      curl -L "https://download.katalon.com/${VERSION}/Katalon_Studio_Engine_MacOS-${VERSION}.tar.gz" -o katalon_runtime_engine.tar.gz
+      echo "Verifying the downloaded file..."
+      file katalon_runtime_engine.tar.gz
+      ls -lh katalon_runtime_engine.tar.gz
+    displayName: 'Download and verify KRE package'
   - bash: |
       echo "Unzipping KRE package..."
       tar -xvf katalon_runtime_engine.tar.gz
