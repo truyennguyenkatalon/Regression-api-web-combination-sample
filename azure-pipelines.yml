@@ -20,7 +20,7 @@ trigger:
   - master
 
 pool:
-  name: vicky
+  name: Default
   demands:
    - agent.Name -equals macbookAir
 
