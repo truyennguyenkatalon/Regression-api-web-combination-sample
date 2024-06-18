@@ -20,10 +20,11 @@ jobs:
       echo "Verifying the downloaded file..."
       file katalon_runtime_engine.tar.gz
       ls -lh katalon_runtime_engine.tar.gz
+      cat katalon_runtime_engine.tar.gz | head -n 20
     displayName: 'Download and verify KRE package'
   - bash: |
       echo "Unzipping KRE package..."
-      tar -xvf katalon_runtime_engine.tar.gz
+      tar -xvf katalon_runtime_engine.tar.gz || cat katalon_runtime_engine.tar.gz
     displayName: 'Unzip KRE package'
   - script: |
       set -ex
