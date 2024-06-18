@@ -11,5 +11,6 @@ pool:
 jobs:
 - job: Test
   steps:
-  - script: echo "Hello, World!"
+  - script: |
+      echo "Hello, World!"
     displayName: 'Run a one-line script'
