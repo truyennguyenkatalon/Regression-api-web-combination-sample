@@ -22,7 +22,7 @@ trigger:
 pool:
   name: Default
   demands:
-   - agent.Name -equals macbookAir
+   - agent.Name -equals Truyens-MacBook-Air-2
 
 stages:
 - stage: Test
